@@ -1,0 +1,51 @@
+@import 'default';
+
+
+
+
+$red: blue;
+
+.test {
+    height: 100px;
+    background-color: $red;
+    color: white;
+
+    p{
+        color: yellow;
+        padding: 20px;
+    }
+
+}
+
+@mixin button-default{
+    padding: 12px;
+    color: black;
+}
+
+.gilaki_1 {
+    background-color: green;
+    @include button-default;
+}
+
+.gilaki_2 {
+    background-color: indigo;
+    @include button-default;
+}
+
+.p_primary {
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.p_child {
+    @extend .p_primary;
+    font {
+        size: 28px;
+    }
+}
+
+
+.p_child {
+    color: red;
+}
